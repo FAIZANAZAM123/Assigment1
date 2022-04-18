@@ -1,0 +1,13 @@
+import pandas as pd
+
+df=pd.read_csv('jsrt_metadata.csv')
+
+df
+
+df['diagnosis'].value_counts()
+
+import matplotlib as plt
+
+from matplotlib import pyplot
+plt.pyplot.pie(df["gender"].value_counts(),explode=[0.1,0.1],shadow=True,labels= ["female","male"],autopct='%1.1f%%',startangle=-90)
+plt.pyplot.pie(df["diagnosis"].value_counts())
