@@ -1,0 +1,17 @@
+import pandas as pd
+
+df=pd.read_csv('jsrt_metadata.csv')
+
+df
+
+df['diagnosis'].value_counts()
+
+import matplotlib as plt
+
+from matplotlib import pyplot
+
+plt.pyplot.hist(df['diagnosis'].value_counts())
+plt.pyplot.title("Total number of patients of each diseases")
+plt.pyplot.xlabel("X-Axis")
+plt.pyplot.ylabel("Y-Axis")
+
